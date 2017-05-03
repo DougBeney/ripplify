@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ripplify Demo</title>
+	<title>Ripplify - Lightweight Javascript/CSS Ripple Button Library</title>
+	<meta name="description" content="Ripplify is a lightweight Javascript/CSS library for easily making any of your buttons into material design ripple button.">
 
 	<!-- STEP 1: Load the Ripplify stylesheet -->
-	<link rel="stylesheet" href="dist/css/ripplify.css">
+	<link rel="stylesheet" href="dist/css/ripplify-min.css">
 
 	<!-- STEP 2: Load the Ripplify scripts -->
 	<!-- Yes, scripts in the header probably aren't the best idea, but this is simply a demo. -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="dist/js/ripplify.js"></script>
+	<script src="dist/js/ripplify-min.js"></script>
 	<!-- It is recommended to load Javascript files as far down in the body as possible. -->
 
 
@@ -58,7 +59,9 @@
 		.banner{
 			background: #F78054;
 		    padding: 20px;
-		    color: white;
+		}
+		.banner h1,.banner h2{
+			color: white;
 		}
 		.container{
 			display: block;
@@ -70,7 +73,7 @@
 			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 		}
 		.text-container{
-			max-width: 400px;
+			max-width: 600px;
 			margin: 0 auto;
 		}
 		.center{
@@ -131,11 +134,25 @@
 <body>
 	<div class="container">
 		<div class="main-demo center">
+			<div class="banner">
+				<h1>Ripplify</h1>
+				<h2>The Lightweight Javascript/CSS Ripple Button Library</h2>
+			</div>
 			<div class="text-container">
-				<h1 class="banner">Thanks for checking out Ripplify!</h1>
 				<h2>Here is a quick demo to get you going.</h2>
-				<p>Make sure to check out the <a target="_blank" href="https://github.com/DougBeney/ripplify">Github page</a> to download the most up to date version.</p>
-				<p><strong>Basic Instruction</strong> Just add the class, <code>.btn-ripple</code>, to any of your buttons/elements to instantly have a Ripplify button!</p>
+				<p>You can <a target="_blank" href="https://github.com/DougBeney/ripplify">download Ripplify on Github</a>.</p>
+
+				<hr>
+				<p><strong>First,</strong> download Riplify from Github. Next, load the Ripplify CSS file, jQuery, and the Ripplify Javascript file.</p>
+<pre class="code">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/css/ripplify-min.css&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;dist/js/ripplify-min.js&quot;&gt;&lt;/script&gt;
+</pre>
+				<hr>
+
+				<p><strong>To create your first button,</strong> add the class, <code>.btn-ripple</code>, to any of your buttons/elements to instantly have a Ripplify button.</p>
 				<p class="code-label">Code</p>
 				<pre class="code">&lt;button class=&quot;btn-ripple&quot;&gt;Regular Ripplify Button&lt;/button&gt;</pre>
 			</div>
@@ -185,7 +202,7 @@
 	</div>
 
 	<footer>
-		<p>Ripplify Created By</p>
+		<p>Ripplify Was Created By</p>
 		<a class="btn-link" href="https://dougbeney.com/"><button data-ripple-color="red" class="btn-red btn-ripple">Doug Beney</button></a>
 	</footer>
 </body>

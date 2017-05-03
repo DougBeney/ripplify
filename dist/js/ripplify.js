@@ -20,7 +20,6 @@
 			}
 
 			$div.css('animation-duration', user_animation_duration+'ms');
-			console.log('hh ' +$div.css('animation-duration'));
 
 			$div.css({
 				top: mouseY - 25, //Look in the CSS. 25 is half of .ripple-effects width/height 
