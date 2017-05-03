@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ripplify Demo</title>
+
+	<!-- STEP 1: Load the Ripplify stylesheet -->
+	<link rel="stylesheet" href="dist/css/ripplify.css">
+
+	<!-- STEP 2: Load the Ripplify scripts -->
+	<!-- Yes, scripts in the header probably aren't the best idea, but this is simply a demo. -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="dist/js/ripplify.js"></script>
+	<!-- It is recommended to load Javascript files as far down in the body as possible. -->
+
+
+	<!-- Start - Demo stylesheet (Ignore this) -->
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			color: #525151;
+			height: 100vh;
+			background: #F1EBEB;
+		}
+		h1,h2,h3,h4,h5,h6{
+			color: #3E3E3E;
+			letter-spacing: 2px;
+			text-transform: capitalize;
+		}
+		h1,h2,h3,h4,h5,h6,p,img{
+			margin-bottom: 29px;
+			line-height: 1.7;
+		}
+		hr{
+			margin: 50px 0;
+			color:#9FA4A6;
+		}
+		code{
+			background: black;
+			color: white;
+			padding: 3px 5px;
+			border-radius: 9999px;
+		}
+		pre.code {
+		    background: #e8e8e8;
+		    padding: 20px;
+		    overflow: scroll;
+		    text-align: left;
+		}
+		p.code-label {
+		    margin: 0;
+		    margin-bottom: 10px;
+		    margin-top: 29px;
+		    font-weight: bold;
+		    line-height: 0.5;
+		    text-transform: uppercase;
+		}
+		.banner{
+			background: #F78054;
+		    padding: 20px;
+		    color: white;
+		}
+		.container{
+			display: block;
+			max-width: 970px;
+			margin: 10px auto;
+			background: white;
+			min-height: 100%;
+			padding: 20px 40px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+		}
+		.text-container{
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		.center{
+			text-align: center;
+		}
+		button{
+			padding: 20px;
+			width: 400px;
+			max-width: 100%;
+			border: 0;
+			border-radius: 4px;
+			background: #3949A3;
+			text-transform: uppercase;
+			color: white;
+			letter-spacing: 1px;
+			font-size: 20px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			display: block;
+		}
+		button:hover{
+			cursor: pointer;
+		}
+		button:focus{
+			outline: 0;
+		}
+		footer{
+			background: black;
+			color: white;
+			width: 100%;
+			max-width: 100%;
+			font-size: 25px;
+			text-align: center;
+			font-family: verdana;
+			padding: 40px 0;
+			margin-top: 29px;
+		}
+		footer p{
+			margin: 0;
+			margin-bottom: 5px;
+		}
+		.btn-red{
+			background: #B42320;
+		}
+		.btn-red:hover{
+			background: #931E1C;
+		}
+		a.btn-link{
+			text-decoration: none;
+		}
+		a.btn-link:hover{
+			text-decoration: none;
+		}
+	</style>
+	<!-- End - Demo stylesheet (Ignore this) -->
+
+</head>
+<body>
+	<div class="container">
+		<div class="main-demo center">
+			<div class="text-container">
+				<h1 class="banner">Thanks for checking out Ripplify!</h1>
+				<h2>Here is a quick demo to get you going.</h2>
+				<p>Make sure to check out the <a target="_blank" href="https://github.com/DougBeney/ripplify">Github page</a> to download the most up to date version.</p>
+				<p><strong>Basic Instruction</strong> Just add the class, <code>.btn-ripple</code>, to any of your buttons/elements to instantly have a Ripplify button!</p>
+				<p class="code-label">Code</p>
+				<pre class="code">&lt;button class=&quot;btn-ripple&quot;&gt;Regular Ripplify Button&lt;/button&gt;</pre>
+			</div>
+			<p class="code-label">Result</p>
+			<button class="btn-ripple">Regular Ripplify Button</button>
+
+			<hr>
+			<div class="text-container">
+				<h2>Changing the speed of your button animation</h2>
+				<p>Simply add <code>data-animation-duration="4000"</code> to your button to change the animation duration to 4,000 milliseconds (4 seconds).</p>
+				<p class="code-label">Code</p>
+<pre class="code">
+&lt;button 
+	data-animation-duration=&quot;4000&quot;
+	class=&quot;btn-ripple&quot;&gt;
+	Custom Speed! - 4000 (milliseconds)
+&lt;/button&gt;</pre>
+			</div>
+			<p class="code-label">Result</p>
+			<button 
+				data-animation-duration="4000"
+				class="btn-ripple">
+				Custom Speed! - 4000 (milliseconds)
+			</button>
+			<hr>
+
+			<div class="text-container">
+				<h2>Changing the color of your ripple animation</h2>
+				<p>Add <code>data-ripple-color="orange"</code> to your button in order to achieve an orange ripple animation color.</p>
+				<p class="code-label">Code</p>
+<pre class="code">
+&lt;button 
+	data-ripple-color=&quot;orange&quot;
+	class=&quot;btn-ripple&quot;&gt;
+	Custom Ripple Color! - Orange
+&lt;/button&gt;
+</pre>
+			</div>
+
+			<p class="code-label">Result</p>
+			<button 
+				data-ripple-color="orange"
+				class="btn-ripple">
+				Custom Ripple Color! - Orange
+			</button>
+		</div>
+	</div>
+
+	<footer>
+		<p>Ripplify Created By</p>
+		<a class="btn-link" href="https://dougbeney.com/"><button data-ripple-color="red" class="btn-red btn-ripple">Doug Beney</button></a>
+	</footer>
+</body>
+</html>
